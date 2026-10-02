@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "description": "Local MCP server that generates images (via OpenRouter) and saves them as PNG files.",
+  "name": "io.github.LukasMomot/image-generation-mcp",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "nuget",
+      "identifier": "ImageGenerationMcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [],
+      "environmentVariables": [
+        {
+          "name": "OPENROUTER_API_KEY",
+          "description": "OpenRouter API key used to generate images.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "IMAGE_GEN_DEFAULT_MODEL",
+          "description": "Model used when the tool call does not specify one. Defaults to openai/gpt-image-2.5-flare.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "IMAGE_GEN_OUTPUT_DIR",
+          "description": "Directory where generated PNG files are saved. Defaults to ./output (relative to the working directory).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/LukasMomot/image-generation-mcp",
+    "source": "github"
+  }
+}
