@@ -102,6 +102,8 @@ If something goes wrong (missing key, no credits, invalid parameter, timeout), t
 
 ## Using it in MCP clients
 
+> 📘 **Step-by-step guide:** [HOW_TO.md](HOW_TO.md) explains how to register the server in Claude Code (CLI, VS Code, desktop app), change the API key or other settings, and publish again after code changes.
+
 Each example below runs the server from source with `dotnet run`. Replace `/absolute/path/to/image-generation-mcp` with your clone location.
 
 > 💡 **For daily use, publish once** so the client doesn't build on every start, which is faster and avoids client start-up timeouts:
